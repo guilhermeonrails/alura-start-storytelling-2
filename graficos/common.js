@@ -19,4 +19,12 @@ function criarGrafico(data, layout) {
     Plotly.newPlot(grafico, data, layout, config)
 }
 
-export { getCSS, tickConfig, criarGrafico }
+function incluirTexto(texto) {
+    const container = document.getElementById('graficos-container')
+    const paragrafo = document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+    paragrafo.innerHTML = texto
+    container.appendChild(paragrafo)
+}
+
+export { getCSS, tickConfig, criarGrafico, incluirTexto }
